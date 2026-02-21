@@ -1,0 +1,26 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  background-color: #111f35;
+}
+
+.title {
+    font-weight: 800;
+    color: white;
+    font-size: 20px;
+}
+.nav-btn {
+  padding: 6px 12px;
+  border: 1px solid #888;
+  background-color: #D02752;
+  cursor: pointer;
+  color: white;
+  font-weight: 800;
+  margin: 10px;
+}
+
+.nav-btn.small {
+  padding: 4px 10px;
+}

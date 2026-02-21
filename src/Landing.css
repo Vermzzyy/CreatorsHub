@@ -1,0 +1,97 @@
+.landing-container {
+  font-family: Arial, sans-serif;
+  background-color: #ffffffef;
+}
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  padding: 360px;
+}
+
+.hero-left {
+  max-width: 300px;
+}
+
+.primary-btn {
+  margin-top: 10px;
+  padding: 20px 20px;
+  border: 1px solid white;
+  background-color: #D02752;
+  cursor: pointer;
+  color: white;
+  font-weight: 800;
+}
+
+.hero-right .placeholder-box {
+  width: 150px;
+  height: 150px;
+  border: 1px solid #777;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.faq {
+  background-color: #111f35ef;
+  padding: 360px;
+  
+}
+
+.faq h3 {
+    color: white;
+}
+
+.faq-item {
+  background-color: #ddd;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 20px;
+}
+
+.content-section {
+  display: flex;
+  justify-content: space-between;
+    padding: 360px;
+
+}
+
+.placeholder-box {
+  width: 150px;
+  height: 150px;
+  border: 1px solid #777;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.line {
+  height: 3px;
+  width: 200px;
+  background-color: #333;
+  margin-bottom: 10px;
+}
+
+.line.short {
+  width: 120px;
+}
+
+.secondary-btn {
+  margin-top: 10px;
+  padding: 6px 12px;
+  border: 1px solid #777;
+  background-color: #eee;
+  cursor: pointer;
+}
+
+.footer {
+  background-color: #111f35;
+  padding: 30px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.footer h3 {
+    color: white;
+}
+
