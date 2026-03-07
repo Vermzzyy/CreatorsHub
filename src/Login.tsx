@@ -18,32 +18,34 @@ function Login() {
   return (
     <div className="login-container">
       <div className="left-panel">
-        <h2>Welcome Back!</h2>
-        <p>Sign in to get started</p>
+        <h2 className="title">Welcome back!</h2>
+        <p className="subtitle">Sign in to get started</p>
       </div>
 
       <div className="right-panel">
         <div className="login-box">
-          <h3>LOGIN</h3>
+          <p className="backbtn">Back</p>
+          <h1>LOGIN</h1>
 
           <input
             type="email"
-            placeholder="Email"
+            placeholder=" Email"
             className="input-field"
           />
 
           <input
             type="password"
-            placeholder="Password"
+            placeholder=" Password"
             className="input-field"
           />
-
-          <p className="login-link">
-                    Don't have an account?
-                    <a href="">Register</a>
-                </p>
       
           <button className="login-btn">LOGIN</button>
+
+          
+          <p className="login-link">
+                    Don't have an account?    
+                    <a href="" className="register">Register</a>
+                </p>
         </div>
       </div>
     </div>

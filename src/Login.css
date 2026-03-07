@@ -7,53 +7,57 @@
 
 .left-panel {
   flex: 1;
-  background-color: #f0f0f0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.right-panel {
-  flex: 1;
   background-color: #111F35;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
 .left-panel h2 {
-  font-size: 40px;
+  color: white;
+  font-size: 50px;
+  margin-bottom: 15px;
 }
 
 .left-panel p {
-  font-size: 20px;
+  color: white;
+  font-size: 24px;
   margin-top: 0px;
+}
+
+.right-panel {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .login-box {
-  width: 250px;
-  height: 250px;
   display: flex;
   flex-direction: column;
   background-color: white;
-  padding: 0px;
-  border-radius: 10px;
-  padding: 70px;
+  height: 1000px;
+  width: 700px;
+  margin-top: 100px;
 }
 
-.login-box h3 {
+.login-box h1 {
   margin-bottom: 30px;
-  margin-top: 0px;
-  font-size: 30px;
+  margin-top: 100px;
+  font-size: 40px;
+  margin-left: 100px;
 }
 
 .input-field {
-  margin-bottom: 10px;
-  padding: 12px;
+  margin-bottom: 15px;
   border: 1px solid #999;
   outline: none;
-  
+  border-radius: 10px;
+    width: 400px;
+  height: 40px;
+      margin-left: 100px;
 }
 
 .input-field label {
@@ -75,12 +79,40 @@
 }
 
 .login-btn {
-  padding: 10px;
+  width: 400px;
+  height: 50px;
   border: 1px solid #666;
   background-color: #D02752;
   cursor: pointer;
   color: white;
   font-size: 16px;
   margin-top: 20px;
-  
+  border-radius: 15px;
+  margin-left: 100px;
+  transition: 0.5s;
+
+}
+
+.login-btn:hover {
+  background-color: #d02751be;
+  border: 1px solid #0f0f0f;
+  color: black;
+}
+
+.login-link {
+  justify-content: center;
+    align-items: center;
+  margin-left: 100px;
+  margin-top: 15px;
+      margin-left: 190px;
+
+}
+
+.register {
+  color: black;
+  text-decoration: underline;
+}
+
+.backbtn {
+  padding-bottom: 100px;
 }

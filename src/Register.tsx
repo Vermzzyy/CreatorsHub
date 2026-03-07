@@ -7,42 +7,50 @@ function Register() {
     <div className="login-container">
       <div className="left-panel">
         <h2>Create Your Account</h2>
-        <p></p>
+        <p>Sign up to get started with CreatorsHub</p>
       </div>
 
       <div className="right-panel">
         <div className="login-box">
+          <p className="backbtn">Back</p>
           <h3>REGISTER</h3>
 
           <input 
             type="text"
-            placeholder="First Name"
+            placeholder=" First Name"
             className="input-field"
             />
 
           <input 
             type="text"
-            placeholder="Last Name"
+            placeholder=" Last Name"
             className="input-field"
             />
           <br/><br/>
           <input
             type="email"
-            placeholder="Email"
+            placeholder=" Email"
             className="input-field"
           />
 
           <input
             type="password"
-            placeholder="Password"
+            placeholder=" Password"
             className="input-field"
           />
-          
+
+                    <input
+            type="password"
+            placeholder=" Confirm Password"
+            className="input-field"
+          />
+
+          <button className="login-btn">REGISTER</button>
+                    
           <p className="login-link">
                     Already have an account?
-                    <a href="">Login</a>
+                    <a href="" className="login">Login</a>
                 </p>
-          <button className="login-btn">LOGIN</button>
         </div>
       </div>
     </div>
