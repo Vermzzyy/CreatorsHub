@@ -60,7 +60,6 @@ function Register() {
       </div>
 
       <div className="right-panel">
-<<<<<<< HEAD
         <div className="reg-box">
 
           <Link to="/" style={{ textDecoration: "none" }}>
@@ -75,20 +74,9 @@ function Register() {
               placeholder="First Name"
               value={form.firstName}
               onChange={(e) => setForm({...form, firstName: e.target.value})}
-=======
-        <div className="login-box">
-          <p className="backbtn">Back</p>
-          <h3>REGISTER</h3>
-
-          <input 
-            type="text"
-            placeholder=" First Name"
-            className="input-field"
->>>>>>> f8f3e85b15dfee1c2cc8c066e01636c1547a99f8
             />
           </div>
 
-<<<<<<< HEAD
           <div className="input-field">
             <input
               type="text"
@@ -143,38 +131,6 @@ function Register() {
 
           </div>
 
-=======
-          <input 
-            type="text"
-            placeholder=" Last Name"
-            className="input-field"
-            />
-          <br/><br/>
-          <input
-            type="email"
-            placeholder=" Email"
-            className="input-field"
-          />
-
-          <input
-            type="password"
-            placeholder=" Password"
-            className="input-field"
-          />
-
-                    <input
-            type="password"
-            placeholder=" Confirm Password"
-            className="input-field"
-          />
-
-          <button className="login-btn">REGISTER</button>
-                    
-          <p className="login-link">
-                    Already have an account?
-                    <a href="" className="login">Login</a>
-                </p>
->>>>>>> f8f3e85b15dfee1c2cc8c066e01636c1547a99f8
         </div>
       </div>
     </div>
