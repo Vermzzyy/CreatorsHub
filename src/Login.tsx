@@ -53,17 +53,25 @@ function Login() {
 
       <div className="right-panel">
         <div className="login-box">
+<<<<<<< HEAD
           <Link to = '/' style={{ textDecoration: "none" }}>
 <p className="backbtn">← Back</p>
           </Link>
+=======
+          <p className="backbtn">Back</p>
+>>>>>>> f8f3e85b15dfee1c2cc8c066e01636c1547a99f8
           <h1>LOGIN</h1>
 
           <div className="input-field">
           <input
             type="email"
             placeholder=" Email"
+<<<<<<< HEAD
             value={username}
             onChange={(e) => setUsername(e.target.value)}
+=======
+            className="input-field"
+>>>>>>> f8f3e85b15dfee1c2cc8c066e01636c1547a99f8
           />
           </div>
           
@@ -71,6 +79,7 @@ function Login() {
           <input
             type="password"
             placeholder=" Password"
+<<<<<<< HEAD
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
@@ -86,6 +95,18 @@ function Login() {
                 <p className="login-spanmsg">Register</p>
               </Link>
             </div>
+=======
+            className="input-field"
+          />
+      
+          <button className="login-btn">LOGIN</button>
+
+          
+          <p className="login-link">
+                    Don't have an account?    
+                    <a href="" className="register">Register</a>
+                </p>
+>>>>>>> f8f3e85b15dfee1c2cc8c066e01636c1547a99f8
         </div>
       </div>
     </div>
