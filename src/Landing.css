@@ -7,7 +7,7 @@
 
 .hero {
   background-image:     linear-gradient(rgba(0, 0, 0, 0.766), rgba(0,0,0,0.5)),
-url('./assets/landingbg.png'); /* adjust path */
+url('./assets/landingbg.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
