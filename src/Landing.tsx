@@ -1,6 +1,7 @@
 import React from "react";
 import Navbar from "./pages/Navbar"
 import "./Landing.css";
+import { Link } from "react-router-dom";
 
 function Landing() {
   return (
@@ -9,14 +10,17 @@ function Landing() {
 
       <section className="hero">
         <div className="hero-left">
-          <h2>HERO SECTION</h2>
-          <p>MESSAGE</p>
+
+          <h2>
+          Find the <span className="right">Right Creator</span> <br/>
+          for Your Next Project.
+        </h2>
+          <p>Discover designers, developers, editors, and creators <br/>ready to bring your ideas to life.</p>
+          <Link to='register'>
           <button className="primary-btn">GET STARTED</button>
+          </Link>
         </div>
 
-        <div className="hero-right">
-          <div className="placeholder-box">IMAGE</div>
-        </div>
       </section>
 
       <section className="faq">

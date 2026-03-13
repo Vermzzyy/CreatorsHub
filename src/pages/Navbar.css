@@ -2,8 +2,11 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 50px;
+  padding: 15px 100px;
   background-color: #111f35;
+  border-bottom: 1px solid gray;
+  border-right: none;
+  border-left: none;
 }
 
 .title {
@@ -11,16 +14,32 @@
     color: white;
     font-size: 20px;
 }
-.nav-btn {
-  padding: 6px 12px;
+.nav-btn1 {
+  padding: 10px 25px;
   border: 1px solid #888;
+  background-color: #d0275100;
+  cursor: pointer;
+  color: white;
+  font-weight: 800;
+  margin: 10px;
+  border-radius: 10px;
+  font-size: 14px;
+}
+
+.nav-btn2 {
+  padding: 10px 25px;
+  border: 1px solid #000000;
   background-color: #D02752;
   cursor: pointer;
   color: white;
   font-weight: 800;
   margin: 10px;
+  border-radius: 10px;
+  font-size: 14px;
 }
 
-.nav-btn.small {
-  padding: 4px 10px;
+.navbar-logo {
+  margin-top: 10px;
+    width: 200px;
+  height: 50px;
 }

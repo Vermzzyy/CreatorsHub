@@ -1,86 +1,97 @@
-
-.login-container {
-  display: flex;
-  height: 100vh;
-  font-family: Arial, sans-serif;
-}
-
-.left-panel {
-  flex: 1;
-  background-color: #f0f0f0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.right-panel {
-  flex: 1;
-  background-color: #111F35;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.left-panel h2 {
-  font-size: 40px;
-}
-
-.left-panel p {
-  font-size: 20px;
-  margin-top: 0px;
-}
-
-.login-box {
-  width: 250px;
-  height: 380px;
+.reg-box {
   display: flex;
   flex-direction: column;
   background-color: white;
-  padding: 0px;
-  border-radius: 10px;
-  padding: 70px;
+  height: 1000px;
+  width: 700px;
+  margin-top: 50px;
 }
 
-.login-box h3 {
+.reg-box h1 {
   margin-bottom: 30px;
-  margin-top: 0px;
-  font-size: 30px;
+  font-size: 40px;
+  margin-left: 135px;
 }
 
 .input-field {
-  margin-bottom: 10px;
-  padding: 12px;
-  border: 1px solid #999;
+  margin-bottom: 20px;
   outline: none;
-  
-}
+  border-radius: 10px;
+  width: 400px;
+  margin-left: 100px;
+    margin-left: 135px;
 
-.input-field label {
-  font-size: 14px;
-  color: rgb(90, 20, 28);
-  font-weight: 500;
-  display: block;
-  margin-bottom: 5px;
 }
 
 .input-field input {
   width: 100%;
   height: 42px;
-  padding: 10px 12px;
   border: 1px solid #ddd;
   border-radius: 8px;
   font-size: 14px;
   transition: 0.2s;
+  padding: 5px 12px;
 }
 
-.login-btn {
-  padding: 10px;
+.input-field input:focus {
+  border-color: rgb(255, 255, 255);
+  box-shadow: 0 0 0 2px rgba(24, 48, 186, 0.771);
+}
+
+
+.reg-btn {
+  width: 400px;
+  height: 50px;
   border: 1px solid #666;
   background-color: #D02752;
   cursor: pointer;
   color: white;
   font-size: 16px;
-  margin-top: 20px;
-  
+  border-radius: 15px;
+  margin-left: 150px;
+  transition: 0.5s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.reg-btn:hover {
+  background-color: #d02751be;
+  border: 1px solid #0f0f0f;
+  color: black;
+}
+
+.reg-noacc {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+.reg-noacc p {
+  font-size: 15px;
+  margin: 0;
+}
+
+.reg-spanmsg {
+  color: rgb(139, 35, 50);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.reg-spanmsg:hover {
+  text-decoration: underline;
+}
+
+.backbtn {
+  padding-bottom: 0px;
+    margin-left: 50px;
+      cursor: pointer;
+        transition: 0.3s;
+
+}
+
+.backbtn:hover {
+  color:#005ff7;
 }
