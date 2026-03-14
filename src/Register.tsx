@@ -42,7 +42,7 @@ function Register() {
 
       alert("Registration successful!");
 
-      navigate("/home");
+      navigate("/login");
 
     } catch (err) {
 
@@ -115,7 +115,6 @@ function Register() {
             />
           </div>
 
-          {/* ERROR MESSAGE */}
           <p className="error-message">{error}</p>
 
           <button className="reg-btn" onClick={handleRegister}>
