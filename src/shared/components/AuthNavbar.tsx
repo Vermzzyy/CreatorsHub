@@ -1,9 +1,18 @@
 import React from "react";
-import "./Navbar2.css";
-import { Link } from "react-router-dom";
-import Logo from '../assets/creators.png'
+import "./AuthNavbar.css";
+import { Link, useNavigate } from "react-router-dom";
+import Logo from '../../assets/creators.png'
 
-function Navbar2(){
+function AuthNavbar(){
+
+  const navigate = useNavigate();
+
+  const handleLogout = () => {
+    localStorage.removeItem("token");
+    localStorage.removeItem("loggedInEmail");
+    navigate("/login");
+  };
+
   return (
     <nav className="navbar3">
       <div className="navbar-left">
@@ -25,10 +34,10 @@ function Navbar2(){
       </div>
 
       <div className="navbar-right">
-        <button className="nav-btn4">LOGOUT</button>
+        <button className="nav-btn4" onClick={handleLogout}>LOGOUT</button>
       </div>
     </nav>
   );
 };
 
-export default Navbar2;
+export default AuthNavbar;

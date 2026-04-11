@@ -1,9 +1,9 @@
-import { loginUser } from './api/auth'
+import { loginUser } from './api/authApi'
 import { useState } from "react";
 import './Login.css';
 import { Link, useNavigate } from "react-router-dom";
 
-function Login() {
+function LoginPage() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
@@ -27,12 +27,20 @@ function Login() {
 
       const data = await loginUser(username, password);
 
-      localStorage.setItem("token", data.token);
+if (!data.token) {
+  console.error("Login response:", data);
+  throw new Error("Token not found in response");
+}
+
+localStorage.setItem("token", data.token);
+      
+      // Store email separately so that we can always display who is logged in!
+      localStorage.setItem("loggedInEmail", username);
 
       alert("Login successful!");
 
       navigate("/home");
-    } catch (err) {
+    } catch (err: any) {
 
       setError("Invalid email or password.");
 
@@ -93,4 +101,4 @@ function Login() {
 };
 
 
-export default Login;
+export default LoginPage;

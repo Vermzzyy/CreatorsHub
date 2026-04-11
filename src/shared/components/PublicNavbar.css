@@ -1,4 +1,4 @@
-.navbar3 {
+.navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -9,7 +9,12 @@
   border-left: none;
 }
 
-.nav-btn3 {
+.title {
+    font-weight: 800;
+    color: white;
+    font-size: 20px;
+}
+.nav-btn1 {
   padding: 10px 25px;
   border: 1px solid #888;
   background-color: #d0275100;
@@ -21,7 +26,7 @@
   font-size: 14px;
 }
 
-.nav-btn4 {
+.nav-btn2 {
   padding: 10px 25px;
   border: 1px solid #000000;
   background-color: #D02752;
@@ -31,4 +36,10 @@
   margin: 10px;
   border-radius: 10px;
   font-size: 14px;
+}
+
+.navbar-logo {
+  margin-top: 10px;
+    width: 200px;
+  height: 50px;
 }

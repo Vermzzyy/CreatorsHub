@@ -1,9 +1,9 @@
 import { useState } from "react";
 import './Register.css';
 import { Link, useNavigate } from "react-router-dom";
-import { registerUser } from "./api/auth";
+import { registerUser } from "./api/authApi";
 
-function Register() {
+function RegisterPage() {
 
   const navigate = useNavigate();
 
@@ -136,4 +136,4 @@ function Register() {
   );
 }
 
-export default Register;
+export default RegisterPage;

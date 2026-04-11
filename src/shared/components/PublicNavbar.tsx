@@ -1,9 +1,9 @@
 import React from "react";
-import "./Navbar.css";
+import "./PublicNavbar.css";
 import { Link } from "react-router-dom";
-import Logo from '../assets/creators.png'
+import Logo from '../../assets/creators.png'
 
-function Navbar(){
+function PublicNavbar(){
   return (
     <nav className="navbar">
       <div className="navbar-left">
@@ -26,4 +26,4 @@ function Navbar(){
   );
 };
 
-export default Navbar;
+export default PublicNavbar;
