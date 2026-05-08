@@ -54,9 +54,9 @@ export const uploadProfilePhoto = async (file: File) => {
   const email = localStorage.getItem("loggedInEmail") || "user";
   
   const fileName = `${email}-${Date.now()}-${file.name}`;
-  const { data: uploadData, error: uploadError } = await supabase.storage
-    .from('profiles')
-    .upload(fileName, file);
+const { error: uploadError } = await supabase.storage
+  .from('profiles')
+  .upload(fileName, file);
 
   if (uploadError) {
     throw new Error(uploadError.message);
