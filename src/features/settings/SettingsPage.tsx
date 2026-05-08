@@ -29,22 +29,20 @@ function SettingsPage() {
     const loggedInEmail = localStorage.getItem("loggedInEmail") || "";
     if (loggedInEmail) {
       setEmail(loggedInEmail);
-    } // Set it early so it doesn't stay blank if the API crashes!
+    }
 
     try {
 
       const profile = await getProfile();
       console.log("Fetched Profile Data:", profile);
 
-      // If backend nests data inside a "data" object
       const data = profile.data ? profile.data : profile;
 
       setFirstName(data.firstName || data.name || "");
       setLastName(data.lastName || "");
       
-      // Update with API email if available
       setEmail(data.email || data.username || loggedInEmail);
-      setProfilePhoto(data.profilePhoto || data.avatarUrl || data.photo || null);
+      setProfilePhoto(data.profilePhotoUrl || data.profilePhoto || data.avatarUrl || data.photo || null);
 
     } catch (err: any) {
       console.error("Failed to load profile via API, applying fallback. Error:", err);
@@ -76,7 +74,6 @@ function SettingsPage() {
       return;
     }
 
-    // Show local preview immediately
     const previewUrl = URL.createObjectURL(file);
     setProfilePhoto(previewUrl);
 
@@ -108,6 +105,17 @@ function SettingsPage() {
     setMessage("");
 
     try {
+      if (!currentPassword || !newPassword || !confirmPassword) {
+        throw new Error("Please fill in all password fields.");
+      }
+
+      if (newPassword !== confirmPassword) {
+        throw new Error("New passwords do not match.");
+      }
+
+      if (newPassword.length < 6) {
+        throw new Error("New password must be at least 6 characters.");
+      }
 
       await updatePassword({
         currentPassword,
@@ -136,7 +144,7 @@ function SettingsPage() {
   };
 
   return (
-    <div>
+    <div className="settings-page">
 
       <AuthNavbar />
 
@@ -150,7 +158,6 @@ function SettingsPage() {
 
           <div className="settings-body">
 
-            {/* Profile Photo Section */}
             <div className="profile-section">
 
               <div className="profile-photo-wrapper" onClick={handlePhotoClick}>
@@ -196,7 +203,6 @@ function SettingsPage() {
 
             <hr className="settings-divider" />
 
-            {/* Password Section */}
             <h3>Change Password</h3>
             <p className="settings-sub">Update your account password</p>
 

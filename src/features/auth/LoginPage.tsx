@@ -1,4 +1,5 @@
 import { loginUser } from './api/authApi'
+import { getProfile } from '../settings/api/userApi'
 import { useState } from "react";
 import './Login.css';
 import { Link, useNavigate } from "react-router-dom";
@@ -34,8 +35,20 @@ if (!data.token) {
 
 localStorage.setItem("token", data.token);
       
-      // Store email separately so that we can always display who is logged in!
       localStorage.setItem("loggedInEmail", username);
+
+      try {
+        const profile = await getProfile();
+        const pData = profile.data ? profile.data : profile;
+        
+        const name = pData.firstName || pData.name || '';
+        if (name) localStorage.setItem('firstName', name);
+        
+        const role = pData.role || 'CUSTOMER';
+        localStorage.setItem('userRole', role);
+      } catch (_) {
+        localStorage.setItem('userRole', 'CUSTOMER');
+      }
 
       alert("Login successful!");
 
@@ -61,8 +74,8 @@ localStorage.setItem("token", data.token);
 
       <div className="right-panel">
         <div className="login-box">
-          <Link to = '/' style={{ textDecoration: "none" }}>
-<p className="backbtn">← Back</p>
+          <Link to="/" className="back-link">
+            <p className="backbtn">← Back</p>
           </Link>
           <h1>LOGIN</h1>
 

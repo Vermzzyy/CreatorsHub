@@ -1,41 +1,39 @@
 .landing-container {
-  font-family: Arial, sans-serif;
-  background-color: #111f35f0;
-    min-height: 100vh;
-
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+  background-color: #0d1b2e;
+  min-height: 100vh;
 }
 
 .hero {
-  background-image:     linear-gradient(rgba(0, 0, 0, 0.766), rgba(0,0,0,0.5)),
-url('../../assets/landingbg.png');
+  background-image: linear-gradient(rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0.45)),
+    url('../../assets/landingbg.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  
   min-height: 80vh;
   display: flex;
   align-items: center;
-  padding: 60px;
+  padding: 80px 140px;
 }
 
 .hero-left {
-  max-width: 800px;
+  max-width: 700px;
 }
 
-.hero-left h2{
-  font-size: 60px;
+.hero-left h2 {
+  font-size: 58px;
+  font-weight: 800;
   max-width: 700px;
   color: white;
-  line-height: 1;
-  margin-left: 100px;
+  line-height: 1.1;
+  margin-bottom: 18px;
 }
 
 .hero-left p {
-    color: rgb(156 163 175);
-  font-size: 20px;
-  line-height: 1.5;
-    margin-left: 100px;
-
+  color: #9ca3af;
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 36px;
 }
 
 .right {
@@ -43,27 +41,26 @@ url('../../assets/landingbg.png');
 }
 
 .primary-btn {
-  margin-top: 50px;
-  padding: 20px 50px;
+  padding: 16px 48px;
   background-color: #D02752;
-  cursor: pointer;
-  color: rgb(255, 255, 255);
+  color: white;
   font-weight: 800;
+  font-size: 14px;
+  letter-spacing: 0.08em;
+  border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 12px;
-  transition: transform 0.5s ease, box-shadow 0.5s ease;
-  border: 1px solid white;
-    margin-left: 100px;
-
+  cursor: pointer;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease;
 }
 
-.primary-btn:hover{
-        transform: scale(1.08);
-
+.primary-btn:hover {
+  transform: scale(1.06);
+  box-shadow: 0 8px 28px rgba(208, 39, 82, 0.45);
+  background-color: #b81f45;
 }
-
 
 .faq {
-  padding: 80px 150px;
+  padding: 80px 140px;
   background-color: transparent;
   color: white;
 }
@@ -71,7 +68,7 @@ url('../../assets/landingbg.png');
 .faq-title {
   font-size: 28px;
   margin-bottom: 10px;
-  font-weight: bold;
+  font-weight: 700;
 }
 
 .faq-subtitle {
@@ -81,23 +78,32 @@ url('../../assets/landingbg.png');
 }
 
 .faq-item {
-  background-color: #e5e7eb;
-  color: #111f35;
-  padding: 15px 25px;
-  margin-bottom: 15px;
+  background-color: #132035;
+  color: white;
+  padding: 18px 28px;
+  margin-bottom: 12px;
   border-radius: 12px;
+  border: 1px solid #1e3251;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-weight: 700;
-  font-size: 16px;
+  font-weight: 600;
+  font-size: 15px;
   cursor: pointer;
+  transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+
+.faq-item:hover {
+  background-color: #1a2d48;
+  border-color: #2c4a70;
+  transform: translateY(-2px);
 }
 
 .faq-icon {
   font-weight: bold;
   transform: scaleY(0.7);
   font-size: 18px;
+  color: #6b7280;
 }
 
 .cta-section {
@@ -109,14 +115,14 @@ url('../../assets/landingbg.png');
 .cta-title {
   font-size: 36px;
   margin-bottom: 15px;
-  font-weight: bold;
+  font-weight: 800;
 }
 
 .cta-subtitle {
   font-size: 16px;
-  color: #d1d5db;
+  color: #9ca3af;
   margin-bottom: 40px;
-  line-height: 1.5;
+  line-height: 1.6;
 }
 
 .center-btn {
@@ -126,7 +132,7 @@ url('../../assets/landingbg.png');
 
 .footer {
   background-color: #0b1325;
-  padding: 50px 100px 20px;
+  padding: 50px 120px 20px;
   color: white;
   border-top: 1px solid #1f2937;
 }
@@ -143,16 +149,16 @@ url('../../assets/landingbg.png');
 }
 
 .footer-logo {
-  font-size: 24px;
+  font-size: 22px;
   font-weight: 800;
   margin-bottom: 10px;
-  letter-spacing: -1px;
+  letter-spacing: -0.5px;
 }
 
 .footer-tagline {
   font-size: 13px;
   color: #9ca3af;
-  line-height: 1.5;
+  line-height: 1.6;
 }
 
 .footer-right {
@@ -162,20 +168,62 @@ url('../../assets/landingbg.png');
 }
 
 .footer-right h4 {
-  margin-bottom: 15px;
+  margin-bottom: 12px;
   color: white;
   font-size: 14px;
   font-weight: 600;
 }
 
 .footer-right p {
-  margin: 8px 0;
+  margin: 6px 0;
 }
 
 .footer-bottom {
   text-align: center;
-  font-size: 10px;
+  font-size: 11px;
   color: #6b7280;
   padding-top: 20px;
   border-top: 1px solid #1f2937;
+}
+
+@media (max-width: 900px) {
+  .hero {
+    padding: 60px 40px;
+  }
+
+  .hero-left h2 {
+    font-size: 40px;
+  }
+
+  .faq {
+    padding: 60px 32px;
+  }
+
+  .footer {
+    padding: 40px 32px 20px;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    gap: 28px;
+  }
+
+  .footer-right {
+    text-align: left;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero {
+    padding: 48px 24px;
+    min-height: 60vh;
+  }
+
+  .hero-left h2 {
+    font-size: 32px;
+  }
+
+  .faq {
+    padding: 40px 20px;
+  }
 }

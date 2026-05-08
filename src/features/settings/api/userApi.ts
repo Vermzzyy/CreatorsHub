@@ -1,3 +1,5 @@
+import { supabase } from "../../../supabaseClient";
+
 const USER_API = "http://localhost:8080/api/v1/user";
 
 export const getProfile = async () => {
@@ -33,32 +35,57 @@ export const updatePassword = async (data: any) => {
   const result = await response.text();
 
   if (!response.ok) {
-    throw new Error(result);
+    try {
+      const errorObj = JSON.parse(result);
+      throw new Error(errorObj.message || "An unexpected error occurred.");
+    } catch (e) {
+      if (result && !result.startsWith("{")) {
+        throw new Error(result);
+      }
+      throw new Error("Failed to update password. Please try again later.");
+    }
   }
 
   return result;
 };
 
 export const uploadProfilePhoto = async (file: File) => {
-
   const token = localStorage.getItem("token");
+  const email = localStorage.getItem("loggedInEmail") || "user";
+  
+  const fileName = `${email}-${Date.now()}-${file.name}`;
+  const { data: uploadData, error: uploadError } = await supabase.storage
+    .from('profiles')
+    .upload(fileName, file);
 
-  const formData = new FormData();
-  formData.append("file", file);
-
-  const response = await fetch(`${USER_API}/profile/photo`, {
-    method: "POST",
-    headers: {
-      Authorization: `Bearer ${token}`
-    },
-    body: formData
-  });
-
-  const result = await response.json();
-
-  if (!response.ok) {
-    throw new Error(result.message || "Upload failed");
+  if (uploadError) {
+    throw new Error(uploadError.message);
   }
 
-  return result;
+  const { data: { publicUrl } } = supabase.storage
+    .from('profiles')
+    .getPublicUrl(fileName);
+
+  const response = await fetch(`${USER_API}/profile/photo`, {
+    method: "PUT",
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `Bearer ${token}`
+    },
+    body: JSON.stringify({ profilePictureUrl: publicUrl })
+  });
+
+  const resultText = await response.text();
+  let result;
+  try {
+    result = JSON.parse(resultText);
+  } catch (e) {
+    result = { message: "Server error occurred during upload." };
+  }
+
+  if (!response.ok) {
+    throw new Error(result.message || "Upload failed. Please try again.");
+  }
+
+  return { profilePhoto: publicUrl };
 };

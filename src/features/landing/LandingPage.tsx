@@ -47,8 +47,8 @@ function LandingPage() {
           Discover creative services from talented professionals and<br />
           turn your ideas into reality with Creators Hub.
         </p>
-        <Link to='/home'>
-          <button className="primary-btn center-btn">BROWSE SERVICES</button>
+        <Link to='/register'>
+          <button className="primary-btn center-btn">REGISTER AN ACCOUNT</button>
         </Link>
       </section>
 

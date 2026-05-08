@@ -1,0 +1,336 @@
+.sdet-page {
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+  background-color: #0d1b2e;
+  min-height: 100vh;
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+.sdet-content {
+  flex: 1;
+  padding: 48px 100px 64px;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.sdet-back-btn {
+  background: transparent;
+  border: none;
+  color: #9ca3af;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0;
+  margin-bottom: 36px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: color 0.2s ease;
+}
+
+.sdet-back-btn:hover {
+  color: white;
+}
+
+.sdet-layout {
+  display: grid;
+  grid-template-columns: 340px 1fr;
+  gap: 36px;
+  align-items: start;
+}
+
+.sdet-thumb {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  background: linear-gradient(135deg, #0f2746 0%, #1e3a5f 100%);
+  border-radius: 16px;
+  border: 1px solid #1e3251;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.sdet-thumb-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.sdet-thumb-emoji {
+  font-size: 90px;
+  filter: drop-shadow(0 8px 20px rgba(0,0,0,0.5));
+}
+
+.sdet-thumb-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 16px 20px;
+  background: linear-gradient(transparent, rgba(0,0,0,0.75));
+}
+
+.sdet-thumb-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: white;
+}
+
+.sdet-seller-card {
+  background-color: #132035;
+  border: 1px solid #1e3251;
+  border-radius: 14px;
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 16px;
+}
+
+.sdet-seller-avatar {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: #D02752;
+  color: white;
+  font-weight: 700;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.sdet-seller-name {
+  font-size: 14px;
+  font-weight: 700;
+  color: white;
+  margin: 0;
+}
+
+.sdet-seller-label {
+  font-size: 11px;
+  color: #6b7280;
+  margin: 2px 0 0;
+}
+
+.sdet-seller-rating {
+  margin-left: auto;
+  font-size: 13px;
+  color: #f59e0b;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.sdet-seller-reviews {
+  font-size: 11px;
+  color: #6b7280;
+  font-weight: 400;
+  margin-left: 4px;
+}
+
+.sdet-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.sdet-tag {
+  background-color: rgba(208, 39, 82, 0.12);
+  color: #f87171;
+  border: 1px solid rgba(208, 39, 82, 0.25);
+  border-radius: 20px;
+  padding: 5px 14px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.sdet-detail-card {
+  background-color: #132035;
+  border: 1px solid #1e3251;
+  border-radius: 16px;
+  padding: 36px 40px;
+}
+
+.sdet-service-title {
+  font-size: 26px;
+  font-weight: 800;
+  color: white;
+  margin: 0 0 24px;
+  line-height: 1.2;
+}
+
+.sdet-meta-row {
+  display: flex;
+  gap: 48px;
+  margin-bottom: 28px;
+}
+
+.sdet-meta-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.sdet-meta-label {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #6b7280;
+}
+
+.sdet-meta-value {
+  font-size: 15px;
+  font-weight: 600;
+  color: white;
+}
+
+.sdet-price {
+  color: #D02752;
+  font-size: 17px;
+}
+
+.sdet-divider {
+  border: none;
+  border-top: 1px solid #1e3251;
+  margin: 24px 0;
+}
+
+.sdet-section-label {
+  font-size: 14px;
+  font-weight: 700;
+  color: white;
+  margin: 0 0 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.sdet-description {
+  font-size: 14px;
+  color: #9ca3af;
+  line-height: 1.7;
+  margin: 0;
+}
+
+.sdet-instructions-hint {
+  font-size: 13px;
+  color: #6b7280;
+  margin: 0 0 12px;
+  line-height: 1.5;
+}
+
+.sdet-textarea {
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: 10px;
+  border: 1px solid #1e3251;
+  background-color: #0d1b2e;
+  color: white;
+  font-size: 14px;
+  font-family: inherit;
+  resize: vertical;
+  outline: none;
+  box-sizing: border-box;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  line-height: 1.6;
+}
+
+.sdet-textarea::placeholder {
+  color: #6b7280;
+}
+
+.sdet-textarea:focus {
+  border-color: #D02752;
+  box-shadow: 0 0 0 3px rgba(208, 39, 82, 0.15);
+}
+
+.sdet-success-msg {
+  background-color: rgba(16, 185, 129, 0.12);
+  color: #10b981;
+  border: 1px solid rgba(16, 185, 129, 0.25);
+  border-radius: 10px;
+  padding: 12px 16px;
+  font-size: 13px;
+  font-weight: 600;
+  margin-top: 16px;
+}
+
+.sdet-book-btn {
+  width: 100%;
+  margin-top: 20px;
+  padding: 15px;
+  background-color: #D02752;
+  color: white;
+  font-weight: 800;
+  font-size: 14px;
+  letter-spacing: 0.1em;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+}
+
+.sdet-book-btn:hover {
+  background-color: #b81f45;
+  transform: scale(1.02);
+  box-shadow: 0 6px 24px rgba(208, 39, 82, 0.4);
+}
+
+.sdet-not-found {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  padding: 100px 20px;
+  text-align: center;
+  color: #6b7280;
+}
+
+.sdet-not-found span {
+  font-size: 56px;
+  margin-bottom: 20px;
+}
+
+.sdet-not-found h2 {
+  font-size: 22px;
+  color: white;
+  margin-bottom: 24px;
+}
+
+@media (max-width: 960px) {
+  .sdet-content {
+    padding: 40px 32px 56px;
+  }
+
+  .sdet-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .sdet-thumb {
+    max-width: 400px;
+    margin: 0 auto 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .sdet-content {
+    padding: 32px 20px 48px;
+  }
+
+  .sdet-detail-card {
+    padding: 24px 20px;
+  }
+
+  .sdet-meta-row {
+    flex-direction: column;
+    gap: 16px;
+  }
+}

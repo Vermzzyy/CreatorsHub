@@ -61,8 +61,7 @@ function RegisterPage() {
 
       <div className="right-panel">
         <div className="reg-box">
-
-          <Link to="/" style={{ textDecoration: "none" }}>
+          <Link to="/" className="back-link">
             <p className="backbtn">← Back</p>
           </Link>
 
@@ -85,8 +84,6 @@ function RegisterPage() {
               onChange={(e) => setForm({...form, lastName: e.target.value})}
             />
           </div>
-
-          <br/>
 
           <div className="input-field">
             <input
