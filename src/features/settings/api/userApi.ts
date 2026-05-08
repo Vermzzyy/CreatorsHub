@@ -1,6 +1,6 @@
 import { supabase } from "../../../supabaseClient";
 
-const USER_API = "http://localhost:8080/api/v1/user";
+const USER_API = "https://creatorshub-backend.onrender.com/api/v1/user";
 
 export const getProfile = async () => {
 

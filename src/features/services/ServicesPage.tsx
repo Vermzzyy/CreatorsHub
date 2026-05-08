@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import AuthNavbar from '../../shared/components/AuthNavbar';
 import './Services.css';
 
-const API_BASE = 'http://localhost:8080/api/v1/services';
+const API_BASE = 'https://creatorshub-backend.onrender.com/api/v1/services';
 
 export interface Service {
   id: number;

@@ -3,8 +3,8 @@ import { useState, useEffect } from 'react';
 import AuthNavbar from '../../shared/components/AuthNavbar';
 import './ServiceDetail.css';
 
-const API_BASE = 'http://localhost:8080/api/v1/services';
-const ORDERS_API = 'http://localhost:8080/api/v1/orders';
+const API_BASE = 'https://creatorshub-backend.onrender.com/api/v1/services';
+const ORDERS_API = 'https://creatorshub-backend.onrender.com/api/v1/orders';
 
 interface Service {
   id: number;

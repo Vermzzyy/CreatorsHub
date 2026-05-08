@@ -4,7 +4,7 @@ import { getProfile } from '../settings/api/userApi';
 import { Link } from 'react-router-dom';
 import './Home.css';
 
-const ORDERS_API = 'http://localhost:8080/api/v1/orders/my';
+const ORDERS_API = 'https://creatorshub-backend.onrender.com/api/v1/orders/my';
 
 interface Order {
   id: number;
