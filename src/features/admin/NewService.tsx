@@ -4,7 +4,7 @@ import AdminSidebar from "./AdminSidebar";
 import { supabase } from "../../supabaseClient";
 import "./Admin.css";
 
-const API_BASE = "https://creatorshub-backend.onrender.com/api/v1/services";
+const API_BASE = "https://creatorsbackend-6f3r.onrender.com/api/v1/services";
 
 export default function NewService() {
   const navigate = useNavigate();

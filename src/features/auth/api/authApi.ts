@@ -1,4 +1,4 @@
-const API_URL = "https://creatorshub-backend.onrender.com/api/v1/auth";
+const API_URL = "https://creatorsbackend-6f3r.onrender.com/api/v1/auth";
 
 export const loginUser = async (email: string, password: string) => {
 

@@ -3,7 +3,7 @@ import AdminSidebar from "./AdminSidebar";
 import OrderCard from "./OrderCard";
 import "./Admin.css";
 
-const ORDERS_API = "https://creatorshub-backend.onrender.com/api/v1/orders";
+const ORDERS_API = "https://creatorsbackend-6f3r.onrender.com/api/v1/orders";
 
 interface Order {
   id: number;
