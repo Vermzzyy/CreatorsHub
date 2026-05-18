@@ -20,7 +20,12 @@ export default function OrderHistory() {
 
   const fetchOrders = async () => {
     try {
-      const res = await fetch(ORDERS_API);
+      const token = localStorage.getItem("token");
+      const res = await fetch(ORDERS_API, {
+        headers: {
+          ...(token ? { Authorization: `Bearer ${token}` } : {}),
+        },
+      });
       if (res.ok) {
         const data = await res.json();
         setOrders(data);
@@ -38,8 +43,12 @@ export default function OrderHistory() {
 
   const handleStatusUpdate = async (id: number, newStatus: string) => {
     try {
+      const token = localStorage.getItem("token");
       const res = await fetch(`${ORDERS_API}/${id}/status?status=${newStatus}`, {
-        method: "PATCH"
+        method: "PATCH",
+        headers: {
+          ...(token ? { Authorization: `Bearer ${token}` } : {}),
+        },
       });
       if (res.ok) {
         setOrders(prev => prev.map(o => o.id === id ? { ...o, status: newStatus } : o));

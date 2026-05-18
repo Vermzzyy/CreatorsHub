@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom";
 import "./Admin.css";
 
 const API_BASE = "https://creatorsbackend-6f3r.onrender.com/api/v1/services";
+const ORDERS_API = "https://creatorsbackend-6f3r.onrender.com/api/v1/orders";
 
 interface Service {
   id: number;
@@ -17,11 +18,30 @@ interface Service {
 export default function AdminDashboard() {
   const navigate = useNavigate();
   const [services, setServices] = useState<Service[]>([]);
+  const [orders, setOrders] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     fetchServices();
+    fetchOrders();
   }, []);
+
+  const fetchOrders = async () => {
+    try {
+      const token = localStorage.getItem("token");
+      const res = await fetch(ORDERS_API, {
+        headers: {
+          ...(token ? { Authorization: `Bearer ${token}` } : {}),
+        },
+      });
+      if (res.ok) {
+        const data = await res.json();
+        setOrders(data);
+      }
+    } catch (err) {
+      console.error("Failed to fetch orders:", err);
+    }
+  };
 
   const fetchServices = async () => {
     try {
@@ -76,12 +96,12 @@ export default function AdminDashboard() {
 
           <div className="stat-box">
             <p>Current Orders</p>
-            <h3>0</h3>
+            <h3>{orders.filter(o => o.status === "PENDING" || o.status === "IN_PROGRESS").length}</h3>
           </div>
 
           <div className="stat-box">
             <p>Completed Orders</p>
-            <h3>0</h3>
+            <h3>{orders.filter(o => o.status === "COMPLETED").length}</h3>
           </div>
 
         </div>
