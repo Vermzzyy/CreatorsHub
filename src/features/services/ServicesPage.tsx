@@ -15,7 +15,7 @@ export interface Service {
   thumbnail: string;
 }
 
-const CATEGORIES = ['All', 'UI/UX', 'Graphic Design', 'Game Development', '3D & Animation', 'Web Development'];
+const CATEGORIES = ['All', 'UI/UX', 'Graphic Design', 'Game Development', '3D & Animation', 'Web Development', 'Scripting', 'Building'];
 
 export default function ServicesPage() {
   const [search, setSearch] = useState('');
